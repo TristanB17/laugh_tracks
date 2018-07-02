@@ -12,4 +12,13 @@ RSpec.describe Comedian do
       end
     end
   end
+  describe 'Calculations' do
+    it 'returns the average age of all comedians' do
+      comic_1 = Comedian.create(name: 'Hannibal Buress', age: 40)
+      comic_2 = Comedian.create(name: 'Mike Birbiglia', age: 20)
+      result = Comedian.average_age.to_f
+
+      expect(result).to eq(30.0)
+    end
+  end
 end
